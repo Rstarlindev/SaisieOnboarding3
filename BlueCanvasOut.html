@@ -1,0 +1,46 @@
+<html>
+
+<style>
+
+  a {
+    color: orange;
+  }
+
+</style>
+
+<!--<script src="https://rengoku72-developer-edition.na150.force.com/lightning/lightning.out.js"></script> -->
+
+<script src="https://formation-softway-medical.cs160.force.com/lightning/lightning.out.js"></script>
+
+<div data-lightning-out="true"></div>
+
+  <script>
+    const appName = 'c:OptOutFormWrapper';
+    const componentName = 'c:optoutForm';
+   // const lightningEndpoint = 'https://rengoku72-developer-edition.na150.force.com';
+    const lightningEndpoint = 'https://formation-softway-medical.cs160.force.com';
+    const targetElement = document.querySelector("[data-lightning-out]");
+    const componentAttributes = {
+
+    };
+
+    $Lightning.use(
+            appName,
+            function (){
+              $Lightning.createComponent(
+                      componentName,
+                      componentAttributes,
+                      targetElement,
+                      function (cmp){
+                        console.log('lightning component created');
+                      }
+              );
+            },
+            lightningEndpoint
+    );
+
+
+  </script>
+
+
+</html>
